@@ -12,11 +12,13 @@ const io = new Server(httpServer, {
 });
 
 io.on("connection", (socket) => {
+  socket.on("joinRoom", (name: string) => {});
+
   socket.on("disconnect", () => {
     socket.disconnect();
   });
 });
 
-httpServer.listen(3000, () => {
-  console.log("listen 3000");
+httpServer.listen(3002, () => {
+  console.log("listen 3002");
 });
