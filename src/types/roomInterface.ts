@@ -1,6 +1,8 @@
+import { Types } from "mongoose";
 import { IMessage } from "./messageInterface";
 
 export interface IRoom {
-  name: number;
-  messages: IMessage[];
+  name: string;
+  users: string[];
+  messages: Types.ObjectId[];
 }
